@@ -18,15 +18,10 @@ tmr.alarm(0, 2000, 1, function()
         print("Connessione alla Wifi...\n")
     else
         client = mqtt.Client("nodeMCU", 30, "username", "password")
-
         client:connect("192.168.1.100", 1883, 0)
-        
         tmr.stop(0)
 
-   end
-end)
-
-disconnected = 0
+        disconnected = 0
 tmr.alarm(1,2000,1,function()
 
     if wifi.sta.getip() == nil then
@@ -70,4 +65,8 @@ tmr.alarm(2,2000,1, function()
         tmr.start(1)
     end
 end)
+
+   end
+end)
+
 
