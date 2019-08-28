@@ -3,6 +3,8 @@
 -- GND del dht22 al G del nodemcu
 -- VCC del dht22 al 3V del nodemcu
 
+-- NON FUNZIONA USANDO SAFARI, USARE UN ALTRO BROWSER
+
 ----
 -- Fonte: https://ciaobit.com/mcu/esp8266/nodemcu-esp8266-e-dht22-am2302-sensore-di-temperatura-e-umidita-wifi-con-server-web/
 ----
