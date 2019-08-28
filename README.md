@@ -24,7 +24,8 @@ Script che recupera il valore della temperatura e dell'umidità tramite il senso
 
 ### webServerTemperatura.lua
 
-Script che connette il nodeMCU al wifi, successivamente viene rilevata la temperatura e il valore dell'umidità tramite il sensore DHT22. Poi viene creato un web server e collegandosi all'ip del nodeMCU possiamo visualizzare i valori della temperatura e dell'umidità
+Script che connette il nodeMCU al wifi, successivamente viene rilevata la temperatura e il valore dell'umidità tramite il sensore DHT22. Poi viene creato un web server e collegandosi all'ip del nodeMCU possiamo visualizzare i valori della temperatura e dell'umidità.
+Non funziona con safari, usare un altro browser.
 
 ### DHT22ToDomoticz.lua
 
