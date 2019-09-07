@@ -1,14 +1,22 @@
+
 import dht
 import machine
 import time
+from umqtt.simple import MQTTClient
 
 
-def checkTemperature():
-    while(True):
-        d = dht.DHT22(machine.Pin(4))
-        d.measure()
-        print(str(d.temperature()) + " " + str(d.humidity()))
-        c = MQTTClient("client", "192.168.4.4")
+def temperature():
+  while(True):
+      d = dht.DHT22(machine.Pin(4))
+      d.measure()
+      print(str(d.temperature()) + " " + str(d.humidity()))
+      c = MQTTClient("client", "192.168.4.4")
+      try:
         c.connect()
-        c.publish("dev", "Hello World")
-        time.sleep(3600)
+        c.publish("temperature", str(d.temperature()) + " " + str(d.humidity()))
+      except:
+        time.sleep(1)
+      time.sleep(5)
+      
+
+temperature()
