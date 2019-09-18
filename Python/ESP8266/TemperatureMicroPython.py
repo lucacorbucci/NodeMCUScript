@@ -1,3 +1,4 @@
+
 import dht
 import machine
 import time
@@ -14,8 +15,13 @@ def temperature():
         
             c.connect()
             c.publish('temperature', str(d.temperature()) + ' ' + str(d.humidity()))
+            time.sleep(1800)
         except:
-            time.sleep(1)
-        time.sleep(5)
+            time.sleep(10)
+        
+      
 
 temperature()
+
+
+
