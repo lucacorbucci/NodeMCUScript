@@ -30,6 +30,6 @@ Non funziona con safari, usare un altro browser.
 ### DHT22ToDomoticz.lua
 
 Script che permette di far comunicare il Node con Domoticz.
-Per prima cosa ci si connette al Wifi e si avvia un client MQTT. 
+Per prima cosa ci si connette al Wi-Fi e si avvia un client MQTT. 
 Poi si rileva la temperatura e si invia il dato al server MQTT in azione sul rasberry.
 Possiamo utilizzare questo script come init.lua del node, quando non c'è una rete wifi disponibile il Node si disconnette ma continua a cercare il wifi, quando lo trova si connette nuovamente e avvia di nuovo la connessione MQTT.
